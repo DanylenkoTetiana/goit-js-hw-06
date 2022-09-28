@@ -1,11 +1,10 @@
-"user strict";
-const menuItemsByClass = document.querySelectorAll(".item");
-const numbersCategories = menuItemsByClass.length;
+'user strict';
+const categoriesListEls = document.querySelectorAll('.item');
+console.log(`Number of categories:`, categoriesListEls.length);
 
-console.log(`Number of categories:`, numbersCategories);
-
-const titles = document.querySelectorAll("h2");
-
-for (const title of titles) {
-  console.log(`Category:`, title.textContent);
+for (const categoriesListEl of categoriesListEls) {
+  const itemsEl = categoriesListEl.querySelectorAll('li');
+  const titleEl = categoriesListEl.querySelector('h2');
+  console.log(`Category:`, titleEl.textContent);
+  console.log(`Elements:`, itemsEl.length);
 }
