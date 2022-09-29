@@ -15,7 +15,13 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
 const markup = images
-  .map(image => `<li class="gallery-item"><img class="gallery-img"></></li>`)
+  .map(
+    image =>
+      `<li class="gallery-item"><img class="gallery-img" src= "${image.url}" alt="${image.alt}"></></li>`
+  )
   .join('');
 console.log(markup);
 gallery.insertAdjacentHTML('afterbegin', markup);
+// gallery.display = 'flex';
+// gallery.style.gap = '15px';
+// gallery.style.alignItems = 'center';
