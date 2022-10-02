@@ -6,5 +6,5 @@ inputEl.addEventListener(
   'input',
   event =>
     (spanEl.textContent =
-      event.currentTarget.value === null ? `Anonymous` : event.currentTarget.value)
+      event.currentTarget.value === '' ? `Anonymous` : event.currentTarget.value)
 );
